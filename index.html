@@ -32,22 +32,7 @@
             <div id="tag-dropdown" class="dropdown hidden"></div>
           </div>
         <div id="job-listings">
-            <div class="jitm">
-                <img src="" alt="Job Image">
-                <div class="position">
-                    <p>${job.company}</p>
-                    <h2>${job.position}</h2>
-                    <p>${job.postedAt} . ${job.contract} . ${job.location}</p>
-                </div>
-
-                <div class="tags">
-                    <span class="tag">${job.role}</span>
-                    <span class="tag">${job.level}</span>
-                    ${job.languages.map(lang => `<span class="tag">${lang}</span>`).join('')}
-                    ${job.tools.map(tool => `<span class="tag">${tool}</span>`).join('')}
-                </div>
-            </div>
-
+           
         </div>
     </main>
 
