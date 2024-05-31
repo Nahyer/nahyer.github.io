@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let selectedTags = [];
     fetch('data.json')
       .then(response => response.json())
       .then(data => {
@@ -42,9 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   function setupFiltering(jobs) {
+    // if (selectedTags.length === 0) {
+    //     renderJobListings(jobs);
+    //     return;
+    //   }
+
     const tags = document.querySelectorAll('.tag');
     tags.forEach(tag => {
+        selectedTags.push(tag);
+        console.log(selectedTags.length)
       tag.addEventListener('click', () => {
+        selectedTags.push(tag);
+        console.log(selectedTags)
         const filter = tag.textContent;
         const filteredJobs = jobs.filter(job => 
           job.role === filter || 
