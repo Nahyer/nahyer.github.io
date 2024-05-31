@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
 
 body {
+  background-image: url('images/bg-header-desktop.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: 'League Spartan', sans-serif;
   background-color: #f0f4f8;
   margin: 0;
-  padding: 20px;
+  padding: 5rem;
 }
